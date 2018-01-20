@@ -3,4 +3,6 @@ from . import views
 
 urlpatterns = [
 	url('^$', views.post_list, name = 'post_list'),  #^ start, $ end
+	url(r'^post/(?P<pk>\d+)$', views.post_detail, name='post_detail'),
+	url('^post/new$', views.post_new, name='post_new'),
 ]
